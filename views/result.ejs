@@ -1,0 +1,12 @@
+<%- include("partials/header") -%>
+
+<h1> <%= startingResult %> </h1>
+
+<% posts.forEach(function(post){ %>
+<h3> Name: <%= post.name %> </h3>
+<p> Date of Birth: <%= post.dob %> </p>
+<p> Email id: <%= post.email %> </p>
+<p> Phone no.: <%= post.phno %> </p>
+<% }); %>
+
+<%- include("partials/footer") -%>

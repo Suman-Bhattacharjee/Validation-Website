@@ -1,0 +1,36 @@
+<%- include("partials/header") -%>
+
+<h1>Validation Form</h1>
+
+<% if(message != " "){ %>
+  <div class="alert alert-danger" role="alert">
+    <strong> Alert! </strong> <%= message %>
+  </div>
+<% } %>
+
+<!-- User Form as in the url '/user-form' , here also some basic validation like: name, email are performed-->
+
+<form name="form" class="" action="/user-form" method="post">
+  <div class="form-group">
+    <label> Name </label>
+    <input class="form-control" type="name" pattern="[A-Z a-z]+" name="name" placeholder="Your name" required>
+    <label> Date of Birth </label>
+    <input class="form-control dob" type="date" name="age" required>
+    <label> Email </label>
+    <input class="form-control" type="email" name="email" placeholder="name@provider.com" required>
+    <label> Phone Number </label>
+    <input class="form-control" type="Phone" name="phno" placeholder="Your phone number" required>
+  </div>
+  <button class="btn btn-primary" type="submit" name="button">Submit</button>
+</form>
+
+
+
+
+
+
+
+
+
+
+<%- include("partials/footer") -%>
